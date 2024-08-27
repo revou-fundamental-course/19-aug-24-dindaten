@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="#">Welcome</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#our-profile">Our Profile</a></li>
+                    <li><a href="#achievement">Achievement</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="wrapper">
+        <!-- Home section -->
+        <section id="home">
+            <img src="https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg?size=626&ext=jpg&ga=GA1.2.1769275626.1605867161" alt="Web Development"/>
+            <div class="kolom">
+                <p class="deskripsi">Hi! I'm Dinda Mutia Hafid</p>
+                <h2>I am a computer science student</h2>
+                <p>Let's see about my personality</p>
+                <!-- Link "Pelajari Lebih Lanjut" yang menggulir ke bagian Our Profile -->
+                <p><a href="#our-profile" class="tbl-pink">Get started</a></p>
+            </div>
+        </section>
+
+        <!-- Our Profile section -->
+        <section id="our-profile">
+            <div class="kolom">
+                <p class="deskripsi">Hello everyone </p>
+                <h2>I'm Dinda</h2>
+                <p>Introduce my name Dinda Mutia Hafid from the Department of Informatics Engineering I am now a student at Pramita University Indonesia in the Tangerang area</p>
+                <p>My missionis to be able to complete at least one small coding project every month and improve my understanding of the chosen programming language and my vision is to master new skills that I am interested in, become an expert in the field,  and utilize those skills to improve the quality of life and make a positive contribution to others</p>
+            </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/3380/3380805.png" alt="Our Profile"/>
+        </section>
+
+        <!-- Achievement section -->
+        <section id="achievement">
+            <div class="tengah">
+                <div class="kolom">
+                    <p class="deskripsi">Achievement</p>
+                    <h2>Let's take a look</h2>
+                </div>
+
+  <div class="achievement-list">
+        <div class="kartu-achievement">
+            <img src="https://media.licdn.com/dms/image/D4D22AQElbdB-jFmbdw/feedshare-shrink_800/0/1694995732368?e=2147483647&v=beta&t=llkIGknVW1HM9KFPS9TgsOp1Bvmw4iRjHCfRu0Emltw" alt="web rmh laundry"/>
+            <p>Create a laundry house website with HTML, CSS, and JavaScript for MySQL databases</p>
+        </div>
+        <div class="kartu-achievement">
+            <img src="https://www.lokerjakarta.id/storage/company_logo/082420210155246124518c5f606.png" alt="skilvull"/>
+            <p>Programmer Training Conduct training in basic Java, basic CSS, and basic HTML in skilvul</p>
+        </div>
+        <div class="kartu-achievement jaringan-komputer">
+            <img src="https://www.idn.id/storage/2023/02/Logo-Background.png" alt="idn"/>
+            <p>Jaringan Komputer Dasar do a basic networking course knowing about IP addresses</p>
+        </div>
+    </div>
+
+
+<div id="contact-container">
+    <div id="contact">
+        <h3>Contact Us</h3>
+        <form id="contactForm">
+            <div>
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="dob">Tanggal Lahir:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div>
+                <label for="gender">Jenis Kelamin:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Laki-laki</option>
+                    <option value="female">Perempuan</option>
+                    <option value="other">Lainnya</option>
+                </select>
+            </div>
+            <div>
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div>
+                <button type="submit">Kirim</button>
+            </div>
+            <div id="messageSent">
+                Terima kasih! Pesan Anda telah terkirim.
+            </div>
+        </form>
+    </div>
+
+    <div id="messageDisplay">
+        <h3>Pesan Terkirim:</h3>
+        <p id="displayMessage">Belum ada pesan terkirim.</p>
+    </div>
+</div>
+
+<div id="copyright">
+    <div class="wrapper">
+        &copy; 2020. <b>RumahRafif.</b> All Rights Reserved.
+    </div>
+</div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Ambil data formulir
+        const name = document.getElementById('name').value;
+        const dob = document.getElementById('dob').value;
+        const gender = document.getElementById('gender').value;
+        const message = document.getElementById('message').value;
+
+        // Tampilkan pesan konfirmasi
+        document.getElementById('messageSent').style.display = 'block';
+
+        // Tampilkan pesan yang diketik di sebelah kanan
+        document.getElementById('displayMessage').innerHTML = `
+            Nama: ${name}<br>
+            Tanggal Lahir: ${dob}<br>
+            Jenis Kelamin: ${gender}<br>
+            Pesan: ${message}
+        `;
+
+        // Reset form
+        this.reset();
+    });
+</script>
+</body>
+</html>
