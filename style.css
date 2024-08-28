@@ -138,6 +138,40 @@ p {
     align-items: center;
     padding: 20px;
 }
+#our-profile {
+    padding: 20px;
+    text-align: center;
+}
+
+.kolom {
+    margin-bottom: 20px;
+}
+
+.profile-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column; /* Mengatur layout menjadi kolom */
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+}
+
+.profile-card img {
+    width: 150px; /* Atur lebar gambar sesuai kebutuhan */
+    height: auto;
+    border-radius: 8px; /* Menambahkan sudut melengkung jika diinginkan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan efek bayangan */
+}
+
+.profile-card p {
+    margin-top: 10px;
+    font-size: 16px;
+}
 
 .kartu-achievement {
     display: flex;
